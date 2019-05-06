@@ -38,13 +38,17 @@
 
     <!--DETTE ER VORES CONTAINER - Herfra hentes Commandoer-->
     <Window.DataContext>
-        <local:Commands>
-
-        </local:Commands>
+        <local:Commands  />
+        
     </Window.DataContext>
+
+    
 
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/gold.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <DockPanel>
             <Menu DockPanel.Dock="Top" Name="mainMenu">
                 <MenuItem Header="_File" >
@@ -58,10 +62,10 @@
                     <MenuItem Header="_Anvend" Command="{Binding NewWindowCommand}"/>
                 </MenuItem>
             </Menu>
-
+            
             <ToolBar DockPanel.Dock="Top" Height="auto"
                  FontSize="20" FontWeight="Bold"
-                 Background="AliceBlue">
+                 Background="GreenYellow">
 
                 <Button ToolTip="Tilføj vare"
                     Command="{Binding AddCommand}" >

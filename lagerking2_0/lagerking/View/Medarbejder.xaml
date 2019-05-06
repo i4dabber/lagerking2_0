@@ -5,9 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lagerking"
         mc:Ignorable="d"
-        Title="Medarbejder" Height="450" Width="800">
-    <StackPanel>
-        <TextBlock FontSize="20">Menu til medarbejderne UNDER ARBEJDE!</TextBlock>
-        <Button Height="56" Margin="0,0,-0.4,0" FontSize="50" Content="Event Test"></Button>
-    </StackPanel>
+        Title="Medarbejder" Height="1000" Width="800">
+    <Canvas>
+        <StackPanel Height="970">
+            <WrapPanel Width="784" Height="152">
+            <Label  Height="51" Margin="0,8,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="5" >Berat</Label>
+                <Button ToolTip="Tilføj vare" >
+                    
+
+            </Button>
+               
+            </WrapPanel>
+            <WrapPanel>
+                <Label  Height="51" Margin="0,8,0,0" Name="label2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="5" >Bertram</Label>
+                <Button ToolTip="Tilføj vare"
+                    Command="{Binding AddCommand}" Height="152" >
+
+                    <Image Source="/Images/oliver.jpg" />
+
+                </Button>
+            </WrapPanel>
+            <WrapPanel>
+                <Label  Height="51" Margin="0,8,0,0" Name="label3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="5" >Ali</Label>
+                <Button ToolTip="Tilføj vare"
+                    Command="{Binding AddCommand}" Height="152" >
+
+                    <Image Source="/Images/Ali.PNG" Height="142" />
+
+                </Button>
+            </WrapPanel>
+            <WrapPanel>
+                <Label  Height="51" Margin="0,8,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="5" >Daniel</Label>
+                <Button ToolTip="Tilføj vare"
+                    Command="{Binding AddCommand}" Height="152" >
+
+                    <Image Source="/Images/daniel.jpg" />
+
+                </Button>
+            </WrapPanel>
+            <WrapPanel>
+                <Label  Height="51" Margin="0,8,0,0" Name="label5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="5" >Sebastian</Label>
+                <Button ToolTip="Tilføj vare"
+                    Command="{Binding AddCommand}" Height="152" >
+
+                    <Image Source="/Images/sebastian.jpg" />
+
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        
+
+    </Canvas>
+
 </Window>

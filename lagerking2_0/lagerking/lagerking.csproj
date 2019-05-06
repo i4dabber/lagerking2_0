@@ -69,7 +69,7 @@
     <Compile Include="Model\ProduktIndex.cs" />
     <Compile Include="ViewModel\CommandBase.cs" />
     <Compile Include="ViewModel\Commands.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="Mediator\RelayCommand.cs" />
     <Page Include="View\Medarbejder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,10 +135,25 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\gold.jpg" />
+    <Resource Include="Images\gold.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\crown.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bertram.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ali.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\daniel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\oliver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sebastian.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

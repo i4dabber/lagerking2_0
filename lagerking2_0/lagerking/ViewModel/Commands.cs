@@ -13,21 +13,21 @@ using System.IO;
 using System.Windows.Media;
 using System.Windows.Data;
 
+
 namespace lagerking
 {
     public class Commands : CommandBase, INotifyPropertyChanged
     {
         string filename = "";
+       
+
         public Commands()
         {
-            if ((bool)(DesignerProperties.IsInDesignModeProperty.GetMetadata(typeof(DependencyObject)).DefaultValue))
-            {
-                // In Design mode
 
-
-
-            }
+          
+           
         }
+
 
         #region Commands
 
@@ -156,8 +156,10 @@ namespace lagerking
             return (filename != "") && (Count > 0);
         }
 
-        #endregion // Commands
-
+        #endregion 
+       
+        
+        
         #region Properties
 
         int currentIndex = -1;
@@ -284,18 +286,11 @@ namespace lagerking
                     currentAfdelingIndex = value;
                     if (currentAfdelingIndex == 0)
                         cv.Filter = null;
-                    // If Index 0 is no filter (show all)
-                    /*else
-                    {
-                        filter = FilterSpecialities.ElementAt(currentVarerIndex);
-                        cv.Filter = CollectionViewSource_Filter;
-                    }*/
+                   
                     NotifyPropertyChanged();
                 }
             }
         }
-
-
 
         #endregion
     }

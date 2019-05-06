@@ -26,27 +26,29 @@ namespace lagerking
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void SortOrderCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)    
         {
-            ComboBoxItem cbi = e.AddedItems[0] as ComboBoxItem;
-            string newSortOrder;
-            if (cbi != null)
+            ComboBoxItem combobox = e.AddedItems[0] as ComboBoxItem;
+            string sortere;
+            if (combobox != null)
             {
-                if (cbi.Tag == null)
-                    newSortOrder = "None";
-                else
-                    newSortOrder = cbi.Tag.ToString();
+                
+                sortere = combobox.Tag.ToString();
 
-                SortDescription sortDesc = new SortDescription(newSortOrder, ListSortDirection.Ascending);
+                SortDescription sortereDesc = new SortDescription(sortere, ListSortDirection.Ascending);
                 ICollectionView cv = CollectionViewSource.GetDefaultView(DataContext);
                 if (cv != null)
                 {
+                    //Cleare menuen først
                     cv.SortDescriptions.Clear();
-                    if (newSortOrder != "None")
-                        cv.SortDescriptions.Add(sortDesc);
+                    if (sortere != "None")
+                        cv.SortDescriptions.Add(sortereDesc);
                 }
+                
+
             }
         }
 

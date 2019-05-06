@@ -13,9 +13,12 @@ using System.IO;
 using System.Windows.Media;
 using System.Windows.Data;
 
+
+
+
 namespace lagerking
 {
-    // 
+    
     public class CommandBase : ObservableCollection<ProduktIndex>, INotifyPropertyChanged
     {
      
