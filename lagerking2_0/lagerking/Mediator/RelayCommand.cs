@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Windows.Input;
 
 namespace lagerking
+
+    //Tillader eksekvering fra view til model - undeliggende ting
 {
 
     /// <summary>
