@@ -139,10 +139,11 @@
             </ToolBar>
 
             <StatusBar DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Background="AliceBlue">
+                
                 <StatusBarItem Name="sbiDateTime" HorizontalAlignment="Right">
-                    <StackPanel Orientation="Horizontal" Name="spClock">
-                        <TextBlock Margin="4,0" Name="tblkDate" />
-                        <TextBlock Margin="4,0" Name="tblkTime"  />
+                    <StackPanel Orientation="Horizontal" Name="sbiClock">
+                        <TextBlock Margin="4,0" Name="sbiDate" Text="{Binding Path=Dato}" />
+                        <TextBlock Margin="4,0" Name="sbiTime" Text="{Binding Path=Tid}" />
                     </StackPanel>
                 </StatusBarItem>
             </StatusBar>

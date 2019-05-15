@@ -23,11 +23,25 @@ namespace lagerking
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
+        
+        Commands clock = new Commands();
+
         public MainWindow()
         {
             InitializeComponent();
-            
+            sbiClock.DataContext = clock;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(tiktid);
+            timer.Start();
+
         }
+
+        void tiktid(object sender, EventArgs e)
+        {
+            clock.Opdater();
+        }
+
 
         private void SortOrderCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)    
         {

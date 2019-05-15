@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Xml.Serialization;
 using System.IO;
-using System.Windows.Media;
 using System.Windows.Data;
 
 
@@ -24,9 +19,50 @@ namespace lagerking
         public Commands()
         {
 
-          
+            Opdater();
            
         }
+
+        #region Clock
+
+        string dato;
+        string tid;
+        
+        public void Opdater()
+        {
+            Dato = DateTime.Now.ToLongDateString();
+            Tid = DateTime.Now.ToLongTimeString();
+        }
+
+        public string Dato
+        {
+            get { return dato; }
+            private set
+            {
+                if (dato != value)
+                {
+                    dato = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public string Tid
+        {
+            get { return tid; }
+            private set
+            {
+                if (tid != value)
+                {
+                    tid = value;
+                    NotifyPropertyChanged();
+                    
+                }
+            }
+        }
+
+
+        #endregion
 
 
         #region Commands
