@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Medarbejder.xaml.cs">
       <DependentUpon>Medarbejder.xaml</DependentUpon>
     </Compile>
@@ -70,6 +73,10 @@
     <Compile Include="ViewModel\CommandBase.cs" />
     <Compile Include="ViewModel\Commands.cs" />
     <Compile Include="Mediator\RelayCommand.cs" />
+    <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Medarbejder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +111,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -154,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\sebastian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dannebro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

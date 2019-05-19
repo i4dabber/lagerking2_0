@@ -7,7 +7,7 @@ using System.Windows;
 using System.Xml.Serialization;
 using System.IO;
 using System.Windows.Data;
-
+using lagerking.View;
 
 namespace lagerking
 {
@@ -77,9 +77,9 @@ namespace lagerking
         {
             Medarbejder md = new Medarbejder();
             md.Show();
-
-
-            MediatorImpl.NotifyColleagues("NewOne", false);
+             
+        MediatorImpl.NotifyColleagues("New", true);
+          
 
         }
 

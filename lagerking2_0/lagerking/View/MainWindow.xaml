@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lagerking"
         mc:Ignorable="d"
-        Title="Stjerneskud" Height="586.633" Width="891.5" Background="#FFFDFD00"
+        Title="Lagerking" Height="586.633" Width="891.5" Background="#FFFDFD00"
         >
 
     <Window.Resources>
@@ -39,17 +39,21 @@
     <!--DETTE ER VORES CONTAINER - Herfra hentes Commandoer-->
     <Window.DataContext>
         <local:Commands  />
-        
+
     </Window.DataContext>
 
-    
+
 
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="237*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/gold.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <DockPanel>
+        <DockPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,-0.2">
             <Menu DockPanel.Dock="Top" Name="mainMenu">
                 <MenuItem Header="_File" >
                     <MenuItem Header="_New" Command="{Binding NewFileCommand}"/>
@@ -58,14 +62,14 @@
                     <MenuItem Header="Save _As" Command="{Binding SaveAsCommand}" CommandParameter="{Binding ElementName=tbxFileName, Path=Text}"/>
                     <MenuItem Header="_Exit" Command="{Binding CloseAppCommand}"/>
                 </MenuItem>
-                <MenuItem Header="_Medarbejder">
-                    <MenuItem Header="_Anvend" Command="{Binding NewWindowCommand}"/>
+                <MenuItem Header="_Creators">
+                    <MenuItem Header="_Wall of Legends" Command="{Binding NewWindowCommand}"/>
                 </MenuItem>
             </Menu>
-            
+
             <ToolBar DockPanel.Dock="Top" Height="auto"
                  FontSize="20" FontWeight="Bold"
-                 Background="GreenYellow">
+                 Background="DarkGoldenrod">
 
                 <Button ToolTip="Tilføj vare"
                     Command="{Binding AddCommand}" >
@@ -139,7 +143,7 @@
             </ToolBar>
 
             <StatusBar DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Background="AliceBlue">
-                
+
                 <StatusBarItem Name="sbiDateTime" HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal" Name="sbiClock">
                         <TextBlock Margin="4,0" Name="sbiDate" Text="{Binding Path=Dato}" />
@@ -214,7 +218,7 @@
 
                     
                 />
-                
+
             </Grid>
 
         </DockPanel>
