@@ -14,18 +14,20 @@ namespace lagerking
         string pris;
         string antal;
         string afdeling;
+        string description;
 
         public ProduktIndex()
         {
         }
 
 
-        public ProduktIndex(string aNavn, string aPris, string aAntal, string aAfdeling)
+        public ProduktIndex(string aNavn, string aPris, string aAntal, string aAfdeling, string aDescription)
         {
             navn = aNavn;
             pris = aPris;
             antal = aAntal;
             afdeling = aAfdeling;
+            description = aDescription;
             
         }
 
@@ -34,6 +36,8 @@ namespace lagerking
         public string PRIS { get; set; }
 
         public string ANTAL { get; set; }
+
+        public string DESCRIPTION { get; set; }
 
         public string AFDELING { get; set; }
 
