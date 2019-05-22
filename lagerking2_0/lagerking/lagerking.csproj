@@ -70,7 +70,6 @@
     <Compile Include="Mediator\MediatorImpl.cs" />
     <Compile Include="Model\Afdelinger.cs" />
     <Compile Include="Model\ProduktIndex.cs" />
-    <Compile Include="ViewModel\CommandBase.cs" />
     <Compile Include="ViewModel\Commands.cs" />
     <Compile Include="Mediator\RelayCommand.cs" />
     <Page Include="View\Login.xaml">

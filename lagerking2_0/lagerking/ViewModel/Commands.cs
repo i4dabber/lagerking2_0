@@ -8,10 +8,11 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Windows.Data;
 using lagerking.View;
+using System.Runtime.CompilerServices;
 
 namespace lagerking
 {
-    public class Commands : CommandBase, INotifyPropertyChanged
+    public class Commands : ObservableCollection<ProduktIndex>, INotifyPropertyChanged
     {
         string filename = "";
        
@@ -180,7 +181,7 @@ namespace lagerking
         private void SaveFileCommand_Execute()
         {
             // Create an instance of the XmlSerializer class and specify the type of object to serialize.
-            XmlSerializer serializer = new XmlSerializer(typeof(CommandBase));
+            XmlSerializer serializer = new XmlSerializer(typeof(Commands));
             TextWriter writer = new StreamWriter(filename);
             // Serialize all the agents.
             serializer.Serialize(writer, this);
@@ -262,15 +263,15 @@ namespace lagerking
             else
             {
                 filename = argFilename;
-                CommandBase tempFunc = new CommandBase();
+                Commands tempFunc = new Commands();
 
                 // Create an instance of the XmlSerializer class and specify the type of object to deserialize.
-                XmlSerializer serializer = new XmlSerializer(typeof(CommandBase));
+                XmlSerializer serializer = new XmlSerializer(typeof(Commands));
                 try
                 {
                     TextReader reader = new StreamReader(filename);
                     // Deserialize all the agents.
-                    tempFunc = (CommandBase)serializer.Deserialize(reader);
+                    tempFunc = (Commands)serializer.Deserialize(reader);
                     reader.Close();
                 }
                 catch (Exception ex)
@@ -328,6 +329,20 @@ namespace lagerking
             }
         }
 
+        #endregion
+
+        #region INotifyPropertyChanged implementation
+
+        public new event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
         #endregion
     }
 }
