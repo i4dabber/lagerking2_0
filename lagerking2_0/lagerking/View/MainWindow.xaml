@@ -27,8 +27,8 @@
                            Foreground="{Binding Path=Stock}"
                            Width="100"
                            />
-                <TextBlock Text="{Binding Path=AFDELING}" Padding="5, 0"                           
-                           Foreground="{Binding Path=NAVN}"
+                <TextBlock Text="{Binding Path=Department}" Padding="5, 0"                           
+                           Foreground="{Binding Path=Department}"
                            
                 
                            />
@@ -202,7 +202,7 @@
 
                 <ComboBox Margin="2,135,13.6,0" 
                       VerticalAlignment="Top" 
-                      SelectedItem="{Binding Path=AFDELING}" 
+                      SelectedItem="{Binding Path=Department}" 
                       ItemsSource="{Binding Source={StaticResource afdelinger}}"
                        Grid.Column="8" Height="22"  
                       />

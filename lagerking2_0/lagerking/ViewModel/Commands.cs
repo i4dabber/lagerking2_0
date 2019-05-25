@@ -16,10 +16,10 @@ using lagerking.Model;
 
 namespace lagerking
 {
-    public class Commands : ObservableCollection<DbProduktIndex>, INotifyPropertyChanged
+    public class Commands : ObservableCollection<Product>, INotifyPropertyChanged
     {
         LagerkingDbContext _db = new LagerkingDbContext();
-        public List<DbProduktIndex> _products { get; set; }
+        public List<Product> _products { get; set; }
         string filename = "";
        
 
@@ -119,7 +119,7 @@ namespace lagerking
             {
                 _department = value;
                 NotifyPropertyChanged();
-                //OnPropertyChanged("Name");
+              
             }
         }
 
@@ -191,7 +191,7 @@ namespace lagerking
 
         private void AddVare()
         {
-            DbProduktIndex product = new DbProduktIndex();
+            Product product = new Product();
             
             CurrentAfdelingIndex = 0;
             ProduktIndex newFunc = new ProduktIndex();
@@ -200,6 +200,7 @@ namespace lagerking
             product.Price = Price;
             product.Stock = Stock;
             product.Description = "Description missing";
+            product.Department = Department;
             Add(product);
             _db.products.Add(product);
             // Show what the error is if SaveChanges(); fail.
@@ -376,9 +377,9 @@ namespace lagerking
             }
         }
 
-        DbProduktIndex currentVarer = null;
+        Product currentVarer = null;
 
-        public DbProduktIndex CurrentVarer
+        public Product CurrentVarer
         {
             get { return currentVarer; }
             set

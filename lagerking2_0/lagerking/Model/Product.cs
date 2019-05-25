@@ -2,7 +2,7 @@
 
 namespace lagerking
 {
-    public class DbProduktIndex
+    public class Product
     {
         [Key]
         public int Id { get; set; }

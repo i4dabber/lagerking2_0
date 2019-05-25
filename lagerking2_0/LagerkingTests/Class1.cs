@@ -17,18 +17,9 @@ namespace LagerkingTests
         [Fact]
         public void AddCommandCalled()
         {
-   
-            Commands ctx = new Commands();
-            ctx.Name = "UnitTest";
-            ctx.Price = 99;
-            ctx.Stock = 99;
-            ctx.Description = "Unit Test";
-
-            ctx.AddCommand.CanExecute(true);
-            ctx.AddCommand.Execute(null);
 
 
-           
+
 
         }
     }
