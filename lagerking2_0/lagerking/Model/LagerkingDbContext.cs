@@ -15,7 +15,7 @@ namespace lagerking.Model
 
         }
 
-        public virtual DbSet<Product> products { get; set; }
+        public virtual DbSet<DbProduktIndex> products { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
