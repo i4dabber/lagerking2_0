@@ -9,26 +9,27 @@ using System.IO;
 using System.Windows.Data;
 using lagerking.View;
 using System.Runtime.CompilerServices;
+using System.Media;
 
 namespace lagerking
 {
     public class Commands : ObservableCollection<ProduktIndex>, INotifyPropertyChanged
     {
         string filename = "";
-       
+
 
         public Commands()
         {
 
             Opdater();
-           
+
         }
 
         #region Clock
 
         string dato;
         string tid;
-        
+
         public void Opdater()
         {
             Dato = DateTime.Now.ToLongDateString();
@@ -57,7 +58,7 @@ namespace lagerking
                 {
                     tid = value;
                     NotifyPropertyChanged();
-                    
+
                 }
             }
         }
@@ -72,15 +73,16 @@ namespace lagerking
         public ICommand NewWindowCommand
         {
             get { return _newWindow ?? (_newWindow = new RelayCommand(AddWindow)); }
+
         }
 
         private void AddWindow()
         {
             Medarbejder md = new Medarbejder();
             md.Show();
-             
-        MediatorImpl.NotifyColleagues("New", true);
-          
+
+            MediatorImpl.NotifyColleagues("New", false);
+
 
         }
 
@@ -90,7 +92,7 @@ namespace lagerking
             get { return _addCommand ?? (_addCommand = new RelayCommand(AddVare)); }
         }
 
-        private void AddVare()
+        public void AddVare()
         {
             CurrentAfdelingIndex = 0;
             ProduktIndex newFunc = new ProduktIndex();
@@ -193,10 +195,10 @@ namespace lagerking
             return (filename != "") && (Count > 0);
         }
 
-        #endregion 
-       
-        
-        
+        #endregion
+
+
+
         #region Properties
 
         int currentIndex = -1;
@@ -228,7 +230,7 @@ namespace lagerking
                 }
             }
         }
-        
+
         ICommand _NewFileCommand;
         public ICommand NewFileCommand
         {
@@ -323,7 +325,7 @@ namespace lagerking
                     currentAfdelingIndex = value;
                     if (currentAfdelingIndex == 0)
                         cv.Filter = null;
-                   
+
                     NotifyPropertyChanged();
                 }
             }
@@ -344,5 +346,7 @@ namespace lagerking
             }
         }
         #endregion
+
+        
     }
 }

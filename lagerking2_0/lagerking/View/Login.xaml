@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="Lagerking" Height="586.633" Width="891.5" Background="#FFFDFD00">
 
+    <Window.DataContext>
+        <local:Commands />
 
+    </Window.DataContext>
 
     <Grid>
         <Grid.Background>
@@ -29,7 +32,7 @@
             <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="62" Canvas.Left="209" Canvas.Top="168" />
             <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxEmail" VerticalAlignment="Top" Width="247" Canvas.Left="276" Canvas.Top="126" />
             <PasswordBox Height="23" HorizontalAlignment="Left" Name="passwordBox1" VerticalAlignment="Top" Width="247" Canvas.Left="276" Canvas.Top="168" RenderTransformOrigin="0.261,0.543" />
-            <Button ToolTip="Login on app" Content="Login" Height="23" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Top" Width="104" Command="{Binding NewWindowCommand}" Click="Button1_Click" Canvas.Left="320" Canvas.Top="225" />
+            <Button ToolTip="Login on app" Content="Login" Height="23" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Top" Width="104" Canvas.Left="320" Canvas.Top="225" Click="Button1_Click" />
         </Canvas>
     </Grid>
 </Window>

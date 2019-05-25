@@ -1,5 +1,16 @@
 ﻿using System.Windows;
 using System.Media;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
+using System.Xml.Serialization;
+using System.IO;
+using System.Windows.Data;
+using lagerking.View;
+using System.Runtime.CompilerServices;
+
 namespace lagerking.View
 {
     /// <summary>
@@ -10,8 +21,11 @@ namespace lagerking.View
         public Login()
         {
             InitializeComponent();
-            
         }
+  
+        
+
+ 
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
@@ -19,19 +33,23 @@ namespace lagerking.View
             string username = "";
             string passwd = "";
 
-            if (username == "" && passwd == "" )
+
+            if (username == "" && passwd == "")
             {
                 mw.Show();
-                this.Close();
-                
+                mw.Close();
+
+
             }
 
             else
             {
-                MessageBox.Show("Wrong Input","Login Window");
+                MessageBox.Show("Wrong Input", "Login Window");
                 SystemSounds.Exclamation.Play();
             }
-  
         }
     }
+
+
+
 }

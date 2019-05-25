@@ -17,7 +17,7 @@
   <Class Name="lagerking.MediatorImpl">
     <Position X="8.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAABEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Mediator\MediatorImpl.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -47,7 +47,7 @@
   <Class Name="lagerking.ProduktIndex" Collapsed="true">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAQAAAAAAAIAAAAIAAAAAAAIAAAAAgAAAAwAAAAA=</HashCode>
+      <HashCode>gAAAASAAAAAAAIAAIAIAAAAAAAIAAAAAgAAAAwAAAAA=</HashCode>
       <FileName>Model\ProduktIndex.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -93,14 +93,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
-  </Class>
-  <Class Name="lagerking.View.Login" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
-      <FileName>View\Login.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

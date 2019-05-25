@@ -169,9 +169,9 @@
                 </Grid.ColumnDefinitions>
                 <Label Height="28" Margin="0,8,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="5" >_Navn:</Label>
                 <Label Height="28" Margin="0,38,0,0" Name="label2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="43" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="5" >_Pris:</Label>
-                <Label Height="28" Margin="0,135,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="77"  FontSize="14" FontWeight="Bold" Content="Afdeling:" Grid.ColumnSpan="6" />
+                <Label Height="28" Margin="0,105,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="77"  FontSize="14" FontWeight="Bold" Content="Afdeling:" Grid.ColumnSpan="6" />
                 <Label Height="28" Margin="0,68,0,0" Name="label3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="5" >_Antal:</Label>
-                <Label Height="28" Margin="0,98,0,0" Name="label5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="5" >_Description:</Label>
+                
 
                 <TextBox Margin="2,8,13.6,0" 
                      Name="tbxId"
@@ -193,14 +193,9 @@
                      Grid.Column="8" Height="25"
                      />
 
-                <TextBox Margin="2,98,13.6,0" 
-                     Name="textBox4" 
-                     VerticalAlignment="Top" 
-                     Text="{Binding Path=DESCRIPTION}" 
-                     Grid.Column="8" Height="25"
-                     />
+               
 
-                <ComboBox Margin="2,135,13.6,0" 
+                <ComboBox Margin="2,105,13.6,0" 
                       VerticalAlignment="Top" 
                       SelectedItem="{Binding Path=AFDELING}" 
                       ItemsSource="{Binding Source={StaticResource afdelinger}}"
