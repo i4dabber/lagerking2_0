@@ -14,17 +14,17 @@
 
         <DataTemplate x:Key="vareTemplate">
             <WrapPanel>
-                <TextBlock Text="{Binding Path=NAVN}" Padding="5, 0" 
+                <TextBlock Text="{Binding Path=Name}" Padding="5, 0" 
                            Width="150" 
-                           Foreground="{Binding Path=NAVN}"
+                           Foreground="{Binding Path=Name}"
                            />
-                <TextBlock Text="{Binding Path=PRIS}" Padding="5, 0"
+                <TextBlock Text="{Binding Path=Price}" Padding="5, 0"
                            Width="100"
-                           Foreground="{Binding Path=NAVN}"
+                           Foreground="{Binding Path=Price}"
                            
                            />
-                <TextBlock Text="{Binding Path=ANTAL}" Padding="5, 0" 
-                           Foreground="{Binding Path=NAVN}"
+                <TextBlock Text="{Binding Path=Stock}" Padding="5, 0" 
+                           Foreground="{Binding Path=Stock}"
                            Width="100"
                            />
                 <TextBlock Text="{Binding Path=AFDELING}" Padding="5, 0"                           
@@ -176,27 +176,27 @@
                 <TextBox Margin="2,8,13.6,0" 
                      Name="tbxId"
                      VerticalAlignment="Top" 
-                     Text="{Binding Path=NAVN}"                   
+                     Text="{Binding Path=Name}"                   
                      Grid.Column="8" Height="25"
                      />
                 <TextBox Margin="2,38,13.6,0" 
                      Name="textBox2" 
                      VerticalAlignment="Top" 
-                     Text="{Binding Path=PRIS}" 
+                     Text="{Binding Path=Price}" 
                       Grid.Column="8" Height="25"
                      />
 
                 <TextBox Margin="2,68,13.6,0" 
                      Name="textBox3" 
                      VerticalAlignment="Top" 
-                     Text="{Binding Path=ANTAL}" 
+                     Text="{Binding Path=Stock}" 
                      Grid.Column="8" Height="25"
                      />
 
                 <TextBox Margin="2,98,13.6,0" 
                      Name="textBox4" 
                      VerticalAlignment="Top" 
-                     Text="{Binding Path=DESCRIPTION}" 
+                     Text="{Binding Path=Description}" 
                      Grid.Column="8" Height="25"
                      />
 

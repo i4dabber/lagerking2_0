@@ -11,8 +11,8 @@ namespace lagerking
     public class ProduktIndex
     {
         string navn;
-        string pris;
-        string antal;
+        int pris;
+        int antal;
         string afdeling;
         string description;
 
@@ -21,7 +21,7 @@ namespace lagerking
         }
 
 
-        public ProduktIndex(string aNavn, string aPris, string aAntal, string aAfdeling, string aDescription)
+        public ProduktIndex(string aNavn, int aPris, int aAntal, string aAfdeling, string aDescription)
         {
             navn = aNavn;
             pris = aPris;
@@ -33,9 +33,9 @@ namespace lagerking
 
         public string NAVN { get; set; }
 
-        public string PRIS { get; set; }
+        public int PRIS { get; set; }
 
-        public string ANTAL { get; set; }
+        public int ANTAL { get; set; }
 
         public string DESCRIPTION { get; set; }
 

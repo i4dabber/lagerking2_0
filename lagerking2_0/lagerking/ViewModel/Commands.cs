@@ -2,26 +2,125 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Windows.Input;
 using System.Windows;
 using System.Xml.Serialization;
 using System.IO;
+using System.Linq;
 using System.Windows.Data;
 using lagerking.View;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using lagerking.Model;
 
 namespace lagerking
 {
-    public class Commands : ObservableCollection<ProduktIndex>, INotifyPropertyChanged
+    public class Commands : ObservableCollection<DbProduktIndex>, INotifyPropertyChanged
     {
+        LagerkingDbContext _db = new LagerkingDbContext();
+        public List<DbProduktIndex> _products { get; set; }
         string filename = "";
        
 
         public Commands()
         {
+            
+            _products = _db.products.ToList();
 
+            
+            foreach (var product in _products)
+            {
+                Add(product);
+            }
             Opdater();
            
+        }
+
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("Name");
+            }
+        }
+
+        private string _description;
+        public string Description
+        {
+            get
+            {
+                return _description;
+            }
+            set
+            {
+                _description = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("Description");
+            }
+        }
+
+        private int _price;
+        public int Price
+        {
+            get { return _price; }
+            set
+            {
+                _price = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("Price");
+            }
+        }
+
+        private int _stock;
+        public int Stock
+        {
+            get
+            {
+                return _stock;
+            }
+            set
+            {
+                _stock = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("Stock");
+            }
+        }
+        private int _id;
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("ID");
+            }
+        }
+
+        private string _department;
+        public string Department
+        {
+            get
+            {
+                return _department;
+            }
+            set
+            {
+                _department = value;
+                NotifyPropertyChanged();
+                //OnPropertyChanged("Name");
+            }
         }
 
         #region Clock
@@ -92,11 +191,43 @@ namespace lagerking
 
         private void AddVare()
         {
+            DbProduktIndex product = new DbProduktIndex();
+            
             CurrentAfdelingIndex = 0;
             ProduktIndex newFunc = new ProduktIndex();
 
-            Add(newFunc);
-            CurrentVarer = newFunc;
+            product.Name = Name;
+            product.Price = Price;
+            product.Stock = Stock;
+            product.Description = "Description missing";
+            Add(product);
+            _db.products.Add(product);
+            // Show what the error is if SaveChanges(); fail.
+            try
+            {
+                _db.SaveChanges();
+
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+            //Add(newFunc);
+            //CurrentVarer = newFunc;
+            CurrentVarer = product;
             MediatorImpl.NotifyColleagues("Add", true);
 
         }
@@ -110,6 +241,37 @@ namespace lagerking
 
         private void DeleteVare()
         {
+            CurrentVarer.Name = Name;
+            CurrentVarer.Description = Description;
+            CurrentVarer.Price = Price;
+            CurrentVarer.Stock = Stock;
+            //CurrentVarer.Id = Id;
+
+            _db.products.Remove(CurrentVarer);
+
+            try
+            {
+                _db.SaveChanges();
+
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+
             Remove(CurrentVarer);
             MediatorImpl.NotifyColleagues("Del", true);
         }
@@ -214,9 +376,9 @@ namespace lagerking
             }
         }
 
-        ProduktIndex currentVarer = null;
+        DbProduktIndex currentVarer = null;
 
-        public ProduktIndex CurrentVarer
+        public DbProduktIndex CurrentVarer
         {
             get { return currentVarer; }
             set
