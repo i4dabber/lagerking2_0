@@ -20,6 +20,7 @@ namespace lagerking
     {
         LagerkingDbContext _db = new LagerkingDbContext();
         public List<Product> _products { get; set; }
+        Clock clock = new Clock();
         string filename = "";
        
 
@@ -33,7 +34,7 @@ namespace lagerking
             {
                 Add(product);
             }
-            Opdater();
+            clock.Opdater();
            
         }
 
@@ -123,46 +124,7 @@ namespace lagerking
             }
         }
 
-        #region Clock
 
-        string dato;
-        string tid;
-        
-        public void Opdater()
-        {
-            Dato = DateTime.Now.ToLongDateString();
-            Tid = DateTime.Now.ToLongTimeString();
-        }
-
-        public string Dato
-        {
-            get { return dato; }
-            private set
-            {
-                if (dato != value)
-                {
-                    dato = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
-        public string Tid
-        {
-            get { return tid; }
-            private set
-            {
-                if (tid != value)
-                {
-                    tid = value;
-                    NotifyPropertyChanged();
-                    
-                }
-            }
-        }
-
-
-        #endregion
 
 
         #region Commands

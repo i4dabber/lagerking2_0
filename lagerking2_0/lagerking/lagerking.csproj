@@ -71,6 +71,7 @@
       <DependentUpon>201905251204042_department.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Clock.cs" />
     <Compile Include="Model\LagerkingDbContext.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="View\Login.xaml.cs">

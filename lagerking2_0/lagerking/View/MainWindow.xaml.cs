@@ -15,6 +15,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Windows.Threading;
 using System.ComponentModel;
+using lagerking.Model;
 
 namespace lagerking
 {
@@ -24,8 +25,8 @@ namespace lagerking
     public partial class MainWindow : Window
     {
         DispatcherTimer timer = new DispatcherTimer();
+        private Clock clock = new Clock();
         
-        Commands clock = new Commands();
 
         public MainWindow()
         {
