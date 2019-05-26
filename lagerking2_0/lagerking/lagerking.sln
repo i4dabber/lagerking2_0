@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lagerking", "lagerking.csproj", "{32868933-3D2D-41B5-860D-DF12E64F9147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagerkingTests", "..\LagerkingTests\LagerkingTests.csproj", "{476BD80A-7BFE-4C6B-8988-B152450D826A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{32868933-3D2D-41B5-860D-DF12E64F9147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32868933-3D2D-41B5-860D-DF12E64F9147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32868933-3D2D-41B5-860D-DF12E64F9147}.Release|Any CPU.Build.0 = Release|Any CPU
-		{476BD80A-7BFE-4C6B-8988-B152450D826A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{476BD80A-7BFE-4C6B-8988-B152450D826A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{476BD80A-7BFE-4C6B-8988-B152450D826A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{476BD80A-7BFE-4C6B-8988-B152450D826A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

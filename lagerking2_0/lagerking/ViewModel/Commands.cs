@@ -38,6 +38,8 @@ namespace lagerking
            
         }
 
+        #region DBLagerking properties
+
         private string _name;
         public string Name
         {
@@ -68,8 +70,8 @@ namespace lagerking
             }
         }
 
-        private int _price;
-        public int Price
+        private Decimal _price;
+        public Decimal Price
         {
             get { return _price; }
             set
@@ -120,9 +122,13 @@ namespace lagerking
             {
                 _department = value;
                 NotifyPropertyChanged();
-              
+
             }
         }
+
+        #endregion
+
+
 
 
 
