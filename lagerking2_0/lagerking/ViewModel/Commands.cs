@@ -135,21 +135,7 @@ namespace lagerking
 
         #region Commands
 
-        ICommand _newWindow;
-        public ICommand NewWindowCommand
-        {
-            get { return _newWindow ?? (_newWindow = new RelayCommand(AddWindow)); }
-        }
-
-        private void AddWindow()
-        {
-            Medarbejder md = new Medarbejder();
-            md.Show();
-             
-        MediatorImpl.NotifyColleagues("New", true);
-          
-
-        }
+       
 
         ICommand _addCommand;
         public ICommand AddCommand

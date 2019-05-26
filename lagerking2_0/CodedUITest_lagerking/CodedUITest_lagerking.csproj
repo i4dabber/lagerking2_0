@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5862A277-D50A-4AEB-9386-46E102B57DBA}</ProjectGuid>
+    <ProjectGuid>{30E4D5CC-26F2-49F3-8A1D-E859CE7D9EC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CodedUITest_lagerking</RootNamespace>
     <AssemblyName>CodedUITest_lagerking</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -64,12 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="UIMap.uitest" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\lagerking\lagerking.csproj">
-      <Project>{32868933-3d2d-41b5-860d-df12e64f9147}</Project>
-      <Name>lagerking</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

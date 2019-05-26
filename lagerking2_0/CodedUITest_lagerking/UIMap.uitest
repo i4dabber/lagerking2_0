@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="6ea63d08-b6c2-4855-918b-03c6254ef986" AssemblyVersion="16.0.28315.86" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="77f3f9a2-0813-42d4-a0f9-6db73a14187c" AssemblyVersion="15.0.26208.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.11.17134.0" WarningLevel="1" />
@@ -9,7 +9,7 @@
       <Setting Name="DefaultBrowser" Value="IEXPLORE.EXE" WarningLevel="1" />
       <Setting Name="PopupBlocker" Value="yes" WarningLevel="1" />
       <Setting Name="TabbedBrowsing" WarningLevel="2" />
-      <Setting Name="InternetZoneSecurity" Value="66816" WarningLevel="2" />
+      <Setting Name="InternetZoneSecurity" Value="0" WarningLevel="2" />
       <Setting Name="IntranetZoneSecurity" Value="69632" WarningLevel="2" />
       <Setting Name="TrustedZoneSecurity" Value="70912" WarningLevel="2" />
       <Setting Name="RestrictedZoneSecurity" Value="73728" WarningLevel="2" />
@@ -17,14 +17,14 @@
       <Setting Name="EnhancedSecurityConfiguration" WarningLevel="1" />
     </Group>
     <Group Name="OS">
-      <Setting Name="Name" Value="Microsoft Windows 10 Home" WarningLevel="2" />
+      <Setting Name="Name" Value="Microsoft Windows 10 Pro" WarningLevel="2" />
       <Setting Name="Version" Value="Microsoft Windows NT 10.0.17134.0" WarningLevel="2" />
       <Setting Name="IsUserAdmin" Value="False" WarningLevel="2" />
       <Setting Name="Is64BitOperatingSystem" Value="True" WarningLevel="2" />
       <Setting Name="IsTerminalServerSession" Value="False" WarningLevel="2" />
-      <Setting Name="OSLanguage" Value="1033" WarningLevel="1" />
-      <Setting Name="UserLocale" Value="8192" WarningLevel="1" />
-      <Setting Name="DragFullWindows" Value="True" WarningLevel="2" />
+      <Setting Name="OSLanguage" Value="1030" WarningLevel="1" />
+      <Setting Name="UserLocale" Value="1030" WarningLevel="1" />
+      <Setting Name="DragFullWindows" Value="False" WarningLevel="2" />
       <Setting Name="ScreenResolutionWidth" Value="1920" WarningLevel="2" />
       <Setting Name="ScreenResolutionHeight" Value="1080" WarningLevel="2" />
       <Setting Name="SystemDPIX" Value="120" WarningLevel="2" />
@@ -33,7 +33,12 @@
       <Setting Name="UACEnabled" Value="1" WarningLevel="2" />
       <Setting Name="UACPromptEnabled" Value="5" WarningLevel="1" />
     </Group>
-    <Group Name="TechnologyManagers" />
+    <Group Name="TechnologyManagers">
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="UIA" WarningLevel="1" />
+    </Group>
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
@@ -42,7 +47,7 @@
       <Value Encoded="false">Cola</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="NavnInput">
+    <TestStepMarkerAction Comment="" MarkerInformation="NavnField_Method">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -53,128 +58,10 @@
     </TestStepMarkerAction>
     <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox2Edit">
       <ParameterName />
-      <Value Encoded="false">25</Value>
+      <Value Encoded="false">200</Value>
       <Type>String</Type>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UITextBox3Edit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="114" Y="16" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="PrisInput">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox3Edit">
-      <ParameterName />
-      <Value Encoded="false">2</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UIItemComboBox">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="144" Y="13" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="454" Y="289" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AntalInput">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UIItemComboBox">
-      <ParameterName />
-      <Value Encoded="false">D</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AfdelingInput">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>lagerking.ProduktIndex</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertListViewInputCorrect">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UIItemToolBar.UITilføjvareButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="15" Y="17" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AddBtnTest">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <Value Encoded="false">Cola</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="NavnFieldInput">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox2Edit">
-      <ParameterName />
-      <Value Encoded="false">15</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="PrisfFieldInput">
+    <TestStepMarkerAction Comment="" MarkerInformation="PrisField_Test">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -188,7 +75,7 @@
       <Value Encoded="false">300</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AntalFieldInput">
+    <TestStepMarkerAction Comment="" MarkerInformation="AntalField_Test">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -202,67 +89,7 @@
       <Value Encoded="false">B</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AfdelingFieldInput">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>lagerking.ProduktIndex</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>lagerking.ProduktIndex</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertMethod1">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>Cola</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertNavnInput_True">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILoginButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="37" Y="7" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="Login_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="AfdelingField_Test">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -275,12 +102,12 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="17" Y="20" />
+      <Location X="18" Y="13" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AddBtn_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="TilfojKnap_Test">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -289,21 +116,29 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
+    <StringAssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList">
+      <ParameterName />
+      <PropertyName>SelectedItemsAsString</PropertyName>
+      <ExpectedValue>lagerking.Product</ExpectedValue>
+      <MessageOnValidationFailure />
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertList_True">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
     <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
       <ParameterName />
-      <Value Encoded="false">Honning</Value>
+      <Value Encoded="false">Cola</Value>
       <Type>String</Type>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="50" Y="16" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="Navn_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="NavnField_Input">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -314,10 +149,10 @@
     </TestStepMarkerAction>
     <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox2Edit">
       <ParameterName />
-      <Value Encoded="false">26</Value>
+      <Value Encoded="false">25</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="Pris_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="PrisField_Input">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -328,79 +163,10 @@
     </TestStepMarkerAction>
     <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox3Edit">
       <ParameterName />
-      <Value Encoded="false">340</Value>
+      <Value Encoded="false">30</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="Antal_Input">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <Value Encoded="false">Honning</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="135" Y="13" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="NavnFelt_Input">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox2Edit">
-      <ParameterName />
-      <Value Encoded="false">26</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="146" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="Prisfelt_Input">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITextBox3Edit">
-      <ParameterName />
-      <Value Encoded="false">300</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="343" Y="20" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AntalFelt_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="AntalField_Input">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -414,7 +180,7 @@
       <Value Encoded="false">A</Value>
       <Type>String</Type>
     </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AfdelingFelt_Input">
+    <TestStepMarkerAction Comment="" MarkerInformation="AfdelingField_Input">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -423,86 +189,16 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>lagerking.ProduktIndex</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertListView_Input">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <Value Encoded="false">Cola</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="FeltNavn_Input">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>Cola</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertNavn_IsTrue">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <AssertAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>Cola</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Type>String</Type>
-      <PropertyCondition>AreEqual</PropertyCondition>
-    </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertMethod2">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <Value Encoded="false">Cola</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
+    <MouseAction UIObjectName="UIMap.UILagerkingWindow.UIItemToolBar.UITilføjvareButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="50" Y="9" />
+      <Location X="13" Y="17" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="NavnInput_Method">
+    <TestStepMarkerAction Comment="" MarkerInformation="TilfojKnap_Input">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -511,32 +207,15 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UILagerkingWindow.UITbxIdEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>Cola</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertMethod3">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProduktIndeListItem">
+    <StringAssertAction UIObjectName="UIMap.UILagerkingWindow.UILbxAgentsList.UILagerkingProductListItem">
       <ParameterName />
       <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>lagerking.ProduktIndex</ExpectedValue>
+      <ExpectedValue>lagerking.Product</ExpectedValue>
       <MessageOnValidationFailure />
       <Comparison>CurrentCulture</Comparison>
       <PropertyCondition>Contains</PropertyCondition>
     </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="AssertMethod4">
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertLW_Received">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -551,7 +230,7 @@
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UILagerkingWindow" FriendlyName="Lagerking" SpecialControlType="None" SessionId="264006">
+        <TopLevelWindow ControlType="Window" Id="UILagerkingWindow" FriendlyName="Lagerking" SpecialControlType="None" SessionId="133500">
           <TechnologyName>UIA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Lagerking</WindowTitle>
@@ -615,33 +294,6 @@
               <SupportLevel>0</SupportLevel>
               <Descendants />
             </UIObject>
-            <UIObject ControlType="List" Id="UILbxAgentsList" FriendlyName="lbxAgents" SpecialControlType="None">
-              <TechnologyName>UIA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Lagerking</WindowTitle>
-              </WindowTitles>
-              <AndCondition>
-                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
-                <PropertyCondition Name="ControlType">List</PropertyCondition>
-                <PropertyCondition Name="AutomationId">lbxAgents</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UILagerkingProduktIndeListItem" FriendlyName="lagerking.ProduktIndex" SpecialControlType="None">
-                  <TechnologyName>UIA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Lagerking</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition>
-                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                    <PropertyCondition Name="Name">lagerking.ProduktIndex</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
             <UIObject ControlType="ToolBar" Id="UIItemToolBar" FriendlyName="" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
@@ -668,18 +320,33 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Button" Id="UILoginButton" FriendlyName="Login" SpecialControlType="None">
+            <UIObject ControlType="List" Id="UILbxAgentsList" FriendlyName="lbxAgents" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Lagerking</WindowTitle>
               </WindowTitles>
               <AndCondition>
                 <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
-                <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                <PropertyCondition Name="AutomationId">button1</PropertyCondition>
+                <PropertyCondition Name="ControlType">List</PropertyCondition>
+                <PropertyCondition Name="AutomationId">lbxAgents</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
-              <Descendants />
+              <Descendants>
+                <UIObject ControlType="ListItem" Id="UILagerkingProductListItem" FriendlyName="lagerking.Product" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Lagerking</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition>
+                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
+                    <PropertyCondition Name="Name">lagerking.Product</PropertyCondition>
+                    <PropertyCondition Name="Instance">5</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
             </UIObject>
           </Descendants>
         </TopLevelWindow>

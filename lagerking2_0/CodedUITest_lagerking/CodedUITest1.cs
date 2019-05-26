@@ -9,65 +9,60 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 using System.IO;
-using lagerking;
-
-
 
 namespace CodedUITest_lagerking
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
+   
+    
     [CodedUITest]
     public class CodedUITest1
     {
         public TestContext TestContext { get; set; }
         public UIMap UIMap => map ?? (map = new UIMap());
-        public UIMap map;
+        private UIMap map;
         private string _path;
         private ApplicationUnderTest _uut;
+
         public CodedUITest1()
         {
-            _path = "../../../lagerking/bin/Debug/lagerking";
+            _path = "../../../lagerking/bin/Debug/lagerking.exe";
             Assert.IsTrue(File.Exists(_path));
         }
 
         [TestMethod]
-
-        public void CodedUITest_FunctionTest()
+        public void CodedUITestMethod1()
         {
 
-            this.UIMap.NavnInput_Method();
-            
-            this.UIMap.AssertMethod4();
-
+            this.UIMap.NavnField_Input();
+            this.UIMap.PrisField_Input();
+            this.UIMap.AntalField_Input();
+            this.UIMap.AfdelingField_Input();
+            this.UIMap.TilfojKnap_Input();
+            this.UIMap.AssertLW_Received();
 
 
         }
 
-        [TestMethod]
-        public void CodedUITest_FieldInput()
-        {
+        #region Additional test attributes
 
-            this.UIMap.NavnFelt_Input();
-            this.UIMap.Prisfelt_Input();
-            this.UIMap.AntalFelt_Input();
-            this.UIMap.AfdelingFelt_Input();
-            this.UIMap.AssertListView_Input();
+        // You can use the following additional attributes as you write your tests:
 
-        }
-        [TestInitialize]
+        ////Use TestInitialize to run code before running each test 
+        [TestInitialize()]
         public void MyTestInitialize()
         {
             _uut = ApplicationUnderTest.Launch(_path);
         }
 
-        [TestCleanup]
+        ////Use TestCleanup to run code after each test has run
+        [TestCleanup()]
         public void MyTestCleanup()
         {
-            _uut.Close();
+           _uut.Close(); 
         }
-        
-     
+
+        #endregion
+
+
     }
 }

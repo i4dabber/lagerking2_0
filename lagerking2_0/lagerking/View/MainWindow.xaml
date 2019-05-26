@@ -62,9 +62,6 @@
                     <MenuItem Header="Save _As" Command="{Binding SaveAsCommand}" CommandParameter="{Binding ElementName=tbxFileName, Path=Text}"/>
                     <MenuItem Header="_Exit" Command="{Binding CloseAppCommand}"/>
                 </MenuItem>
-                <MenuItem Header="_Creators">
-                    <MenuItem Header="_Wall of Legends" Command="{Binding NewWindowCommand}"/>
-                </MenuItem>
             </Menu>
 
             <ToolBar DockPanel.Dock="Top" Height="auto"
