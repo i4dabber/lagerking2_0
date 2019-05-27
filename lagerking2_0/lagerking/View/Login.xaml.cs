@@ -39,7 +39,6 @@ namespace lagerking.View
                 mw.Show();
                 mw.Close();
 
-
             }
 
             else
